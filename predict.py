@@ -5,8 +5,6 @@
 
 import os
 
-os.system('python setup.py develop')
-
 import cv2
 import shutil
 import tempfile
