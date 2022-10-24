@@ -5,7 +5,6 @@
 
 import os
 
-os.system('pip install gfpgan')
 os.system('python setup.py develop')
 
 import cv2
@@ -14,14 +13,9 @@ import tempfile
 import torch
 from basicsr.archs.rrdbnet_arch import RRDBNet
 from basicsr.archs.srvgg_arch import SRVGGNetCompact
-
 from realesrgan.utils import RealESRGANer
-
-try:
-    from cog import BasePredictor, Input, Path
-    from gfpgan import GFPGANer
-except Exception:
-    print('please install cog and realesrgan package')
+from cog import BasePredictor, Input, Path
+from gfpgan import GFPGANer
 
 
 class Predictor(BasePredictor):
